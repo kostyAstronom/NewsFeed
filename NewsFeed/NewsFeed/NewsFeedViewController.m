@@ -7,17 +7,27 @@
 //
 
 #import "NewsFeedViewController.h"
+#import "NetworkManager.h"
 
 @interface NewsFeedViewController ()
-    @property (nonatomic) NSArray *listOfNews;
+@property (nonatomic) NSMutableArray *listOfStories;
+@property (nonatomic) NetworkManager *networkManager;
 @end
 
 @implementation NewsFeedViewController
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.listOfNews = @[@"First", @"Second", @"Third", @"Fourth"];
+    //self.listOfStories = @[@"First", @"Second", @"Third", @"Fourth"];
+    
+    self.networkManager = [[NetworkManager alloc] init];
+    [self.networkManager getTopStoriesWithCompletion:^(NSArray *stories, NSError *error) {
+        
+        for(Story *story in stories){
+            [self.listOfStories addObject:story];
+        }
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -25,7 +35,7 @@
 }
 
 - (NSInteger)tableView:(nonnull UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [self.listOfNews count];
+    return [self.listOfStories count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -38,7 +48,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:newsFeedIdentifier];
     }
     
-    cell.textLabel.text = [self.listOfNews objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.listOfStories objectAtIndex:indexPath.row];
     return cell;
 }
 

@@ -7,19 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "StoryDB+CoreDataProperties.h"
 #import "Story.h"
 
-@interface NetworkManager : NSObject {
-    
-    NSString *defaultURL;
-    
-}
+@interface NetworkManager : NSObject
 
 @property NSString *defaultURL;
 
-- (id)initWith:(NSString*)userURL;
-- (void)getStoryByID:(NSNumber*)itemID withCompletion:(void (^)(Story *story, NSError *error))completionHahdler;
-- (NSArray*)getTopStoriesIDsWithCompletion:(void(^)(NSArray *storiesIDs, NSError *error))completionHandler;
-- (NSArray*)getTopStoriesWithCompletion:(void(^)(NSArray *stories, NSError *error))completionHandler;
+- (id)initWith:(NSString *)userURL;
+- (void)getStoryByID:(NSNumber *)storyID withCompletion:(void (^)(StoryDB *story, NSError *error))completionHahdler;
+- (void)getTopStoriesIDsWithCompletion:(void(^)(NSArray *storiesIDs, NSError *error))completionHandler;
+- (void)getTopStoriesWithCompletion:(void(^)(NSArray<StoryDB *> *stories, NSError *error))completionHandler;
+- (void)getHTMLByStory:(StoryDB *)story withCompletion:(void(^)(NSURLRequest *htmlStory, NSError *error))completionHandler;
 
 @end

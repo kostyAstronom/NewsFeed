@@ -6,32 +6,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "NewsFeed/NewsFeedViewController.m"
-            timestampString = "544952965.048658"
+            filePath = "NewsFeed/New Group/SingleNewsViewController.m"
+            timestampString = "545135773.004109"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "-viewDidLoad"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "-setUpWith:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "No"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NewsFeed/New Group/SingleNewsViewController.m"
+            timestampString = "545135773.004185"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "-setUpWith:"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsFeed/NetworkManager/NetworkManager.m"
-            timestampString = "544952965.0492589"
+            timestampString = "545226085.64756"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "-getTopStoriesIDsWithCompletion:"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "-getStoryByID:withCompletion:"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -8,26 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Story : NSObject {
-    
-    NSString *author;
-    NSNumber *descendants;
-    NSNumber *storyID;
-    NSArray *kids;
-    NSNumber *score;
-    NSDate *time;
-    NSString *title;
-    NSString *url;
-    
-}
+@interface Story : NSObject 
 
-@property NSString *author;
+@property NSString *by;
 @property NSNumber *descendants;
 @property NSNumber *storyID;
 @property NSArray *kids;
 @property NSNumber *score;
-@property NSDate *time;
+@property NSNumber *time;
 @property NSString *title;
 @property NSString *url;
+@property NSURL *storedHtml;
+
+- (id)initWithDictionary:(NSDictionary*)dictionary;
 
 @end

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		940E746F207E5E76000AE9E9 /* StoryDB+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 940E746D207E5E76000AE9E9 /* StoryDB+CoreDataClass.m */; };
-		940E7470207E5E76000AE9E9 /* StoryDB+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 940E746E207E5E76000AE9E9 /* StoryDB+CoreDataProperties.m */; };
 		94173C3820779E1300A757D4 /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94173C3720779E1300A757D4 /* NetworkManager.m */; };
+		9456DB762080C28900172FE8 /* NewsFeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9456DB742080C28900172FE8 /* NewsFeed.xcdatamodeld */; };
 		94571777207E1E590018D32D /* NewsFeedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94571774207E1E590018D32D /* NewsFeedViewController.m */; };
 		9457177B207E1EC80018D32D /* SingleNewsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94571778207E1EC80018D32D /* SingleNewsViewController.m */; };
+		945A6A5E207F86F90017AEC8 /* StoryDB+MyExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 945A6A5D207F86F90017AEC8 /* StoryDB+MyExtension.m */; };
 		94694FA9207B457200A06E77 /* Story.m in Sources */ = {isa = PBXBuildFile; fileRef = 94694FA8207B457200A06E77 /* Story.m */; };
 		946F350B207CAF0B00E9B140 /* StoryTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 946F350A207CAF0B00E9B140 /* StoryTableCell.xib */; };
 		946F350E207CB06A00E9B140 /* StoryTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 946F350D207CB06A00E9B140 /* StoryTableCell.m */; };
@@ -20,20 +20,22 @@
 		949A3C00207688F00038BC03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 949A3BFF207688F00038BC03 /* Assets.xcassets */; };
 		949A3C03207688F00038BC03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 949A3C01207688F00038BC03 /* LaunchScreen.storyboard */; };
 		949A3C06207688F00038BC03 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 949A3C05207688F00038BC03 /* main.m */; };
-		94C5500D207E4523004029C2 /* NewsFeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 94C5500B207E4523004029C2 /* NewsFeed.xcdatamodeld */; };
+		94A06F042080D50D00FA9CA4 /* MockNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A06F032080D50D00FA9CA4 /* MockNetworkManager.m */; };
+		94A06F082080D68500FA9CA4 /* NewsServiceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A06F072080D68500FA9CA4 /* NewsServiceFactory.m */; };
+		94A06F0B2080DAC000FA9CA4 /* NewsDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A06F0A2080DAC000FA9CA4 /* NewsDatabaseManager.m */; };
+		94A06F0F2080DB0200FA9CA4 /* NewsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A06F0E2080DB0200FA9CA4 /* NewsService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		940E746B207E5E76000AE9E9 /* StoryDB+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoryDB+CoreDataProperties.h"; sourceTree = "<group>"; };
-		940E746C207E5E76000AE9E9 /* StoryDB+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoryDB+CoreDataClass.h"; sourceTree = "<group>"; };
-		940E746D207E5E76000AE9E9 /* StoryDB+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "StoryDB+CoreDataClass.m"; sourceTree = "<group>"; };
-		940E746E207E5E76000AE9E9 /* StoryDB+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "StoryDB+CoreDataProperties.m"; sourceTree = "<group>"; };
 		94173C3620779E1300A757D4 /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
 		94173C3720779E1300A757D4 /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		9456DB752080C28900172FE8 /* NewsFeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsFeed.xcdatamodel; sourceTree = "<group>"; };
 		94571774207E1E590018D32D /* NewsFeedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewsFeedViewController.m; path = NewsFeed/VC/NewsFeedViewController.m; sourceTree = SOURCE_ROOT; };
 		94571778207E1EC80018D32D /* SingleNewsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleNewsViewController.m; path = NewsFeed/VC/SingleNewsViewController.m; sourceTree = SOURCE_ROOT; };
 		94571779207E1EC80018D32D /* NewsFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewsFeedViewController.h; path = NewsFeed/VC/NewsFeedViewController.h; sourceTree = SOURCE_ROOT; };
 		9457177A207E1EC80018D32D /* SingleNewsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleNewsViewController.h; path = NewsFeed/VC/SingleNewsViewController.h; sourceTree = SOURCE_ROOT; };
+		945A6A5C207F86F90017AEC8 /* StoryDB+MyExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StoryDB+MyExtension.h"; sourceTree = "<group>"; };
+		945A6A5D207F86F90017AEC8 /* StoryDB+MyExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "StoryDB+MyExtension.m"; sourceTree = "<group>"; };
 		94694FA7207B457200A06E77 /* Story.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Story.h; sourceTree = "<group>"; };
 		94694FA8207B457200A06E77 /* Story.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Story.m; sourceTree = "<group>"; };
 		946F350A207CAF0B00E9B140 /* StoryTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoryTableCell.xib; sourceTree = "<group>"; };
@@ -47,7 +49,15 @@
 		949A3C02207688F00038BC03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		949A3C04207688F00038BC03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		949A3C05207688F00038BC03 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		94C5500C207E4523004029C2 /* NewsFeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsFeed.xcdatamodel; sourceTree = "<group>"; };
+		94A06F022080D50D00FA9CA4 /* MockNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockNetworkManager.h; sourceTree = "<group>"; };
+		94A06F032080D50D00FA9CA4 /* MockNetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockNetworkManager.m; sourceTree = "<group>"; };
+		94A06F052080D54200FA9CA4 /* NewsServiceProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsServiceProtocol.h; sourceTree = "<group>"; };
+		94A06F062080D68500FA9CA4 /* NewsServiceFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsServiceFactory.h; sourceTree = "<group>"; };
+		94A06F072080D68500FA9CA4 /* NewsServiceFactory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsServiceFactory.m; sourceTree = "<group>"; };
+		94A06F092080DAC000FA9CA4 /* NewsDatabaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsDatabaseManager.h; sourceTree = "<group>"; };
+		94A06F0A2080DAC000FA9CA4 /* NewsDatabaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsDatabaseManager.m; sourceTree = "<group>"; };
+		94A06F0D2080DB0200FA9CA4 /* NewsService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewsService.h; sourceTree = "<group>"; };
+		94A06F0E2080DB0200FA9CA4 /* NewsService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewsService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +71,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		94173C3520779DEF00A757D4 /* NetworkManager */ = {
+		94173C3520779DEF00A757D4 /* Manageres */ = {
 			isa = PBXGroup;
 			children = (
+				94E5C54C2082043800C16C8D /* Mock */,
+				94A06F052080D54200FA9CA4 /* NewsServiceProtocol.h */,
+				94A06F092080DAC000FA9CA4 /* NewsDatabaseManager.h */,
+				94A06F0A2080DAC000FA9CA4 /* NewsDatabaseManager.m */,
 				94173C3620779E1300A757D4 /* NetworkManager.h */,
 				94173C3720779E1300A757D4 /* NetworkManager.m */,
+				94A06F062080D68500FA9CA4 /* NewsServiceFactory.h */,
+				94A06F072080D68500FA9CA4 /* NewsServiceFactory.m */,
 			);
-			path = NetworkManager;
+			path = Manageres;
 			sourceTree = "<group>";
 		};
 		944AC756207786AD009CDF49 /* APIObjects */ = {
@@ -98,9 +114,10 @@
 		949A3BF5207688EE0038BC03 /* NewsFeed */ = {
 			isa = PBXGroup;
 			children = (
+				94A06F0C2080DAF000FA9CA4 /* Servicies */,
 				94C5500E207E452A004029C2 /* Database */,
 				94C54FDF207E42B8004029C2 /* VC */,
-				94173C3520779DEF00A757D4 /* NetworkManager */,
+				94173C3520779DEF00A757D4 /* Manageres */,
 				944AC756207786AD009CDF49 /* APIObjects */,
 				949A3BF6207688EE0038BC03 /* AppDelegate.h */,
 				949A3BF7207688EE0038BC03 /* AppDelegate.m */,
@@ -114,6 +131,15 @@
 				946F350D207CB06A00E9B140 /* StoryTableCell.m */,
 			);
 			path = NewsFeed;
+			sourceTree = "<group>";
+		};
+		94A06F0C2080DAF000FA9CA4 /* Servicies */ = {
+			isa = PBXGroup;
+			children = (
+				94A06F0D2080DB0200FA9CA4 /* NewsService.h */,
+				94A06F0E2080DB0200FA9CA4 /* NewsService.m */,
+			);
+			path = Servicies;
 			sourceTree = "<group>";
 		};
 		94C54FDF207E42B8004029C2 /* VC */ = {
@@ -130,13 +156,20 @@
 		94C5500E207E452A004029C2 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				940E746B207E5E76000AE9E9 /* StoryDB+CoreDataProperties.h */,
-				940E746E207E5E76000AE9E9 /* StoryDB+CoreDataProperties.m */,
-				940E746C207E5E76000AE9E9 /* StoryDB+CoreDataClass.h */,
-				940E746D207E5E76000AE9E9 /* StoryDB+CoreDataClass.m */,
-				94C5500B207E4523004029C2 /* NewsFeed.xcdatamodeld */,
+				945A6A5C207F86F90017AEC8 /* StoryDB+MyExtension.h */,
+				945A6A5D207F86F90017AEC8 /* StoryDB+MyExtension.m */,
+				9456DB742080C28900172FE8 /* NewsFeed.xcdatamodeld */,
 			);
 			path = Database;
+			sourceTree = "<group>";
+		};
+		94E5C54C2082043800C16C8D /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				94A06F022080D50D00FA9CA4 /* MockNetworkManager.h */,
+				94A06F032080D50D00FA9CA4 /* MockNetworkManager.m */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,16 +244,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94A06F042080D50D00FA9CA4 /* MockNetworkManager.m in Sources */,
 				9457177B207E1EC80018D32D /* SingleNewsViewController.m in Sources */,
+				94A06F0F2080DB0200FA9CA4 /* NewsService.m in Sources */,
+				94A06F082080D68500FA9CA4 /* NewsServiceFactory.m in Sources */,
+				9456DB762080C28900172FE8 /* NewsFeed.xcdatamodeld in Sources */,
 				949A3C06207688F00038BC03 /* main.m in Sources */,
+				94A06F0B2080DAC000FA9CA4 /* NewsDatabaseManager.m in Sources */,
 				94571777207E1E590018D32D /* NewsFeedViewController.m in Sources */,
 				94694FA9207B457200A06E77 /* Story.m in Sources */,
 				949A3BF8207688EE0038BC03 /* AppDelegate.m in Sources */,
-				940E746F207E5E76000AE9E9 /* StoryDB+CoreDataClass.m in Sources */,
 				94173C3820779E1300A757D4 /* NetworkManager.m in Sources */,
-				940E7470207E5E76000AE9E9 /* StoryDB+CoreDataProperties.m in Sources */,
-				94C5500D207E4523004029C2 /* NewsFeed.xcdatamodeld in Sources */,
 				946F350E207CB06A00E9B140 /* StoryTableCell.m in Sources */,
+				945A6A5E207F86F90017AEC8 /* StoryDB+MyExtension.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,12 +456,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		94C5500B207E4523004029C2 /* NewsFeed.xcdatamodeld */ = {
+		9456DB742080C28900172FE8 /* NewsFeed.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				94C5500C207E4523004029C2 /* NewsFeed.xcdatamodel */,
+				9456DB752080C28900172FE8 /* NewsFeed.xcdatamodel */,
 			);
-			currentVersion = 94C5500C207E4523004029C2 /* NewsFeed.xcdatamodel */;
+			currentVersion = 9456DB752080C28900172FE8 /* NewsFeed.xcdatamodel */;
 			path = NewsFeed.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

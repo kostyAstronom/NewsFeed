@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NewsServiceProtocol.h"
 
 @interface NewsFeedViewController : UIViewController
+
+@property (nonatomic) id<NewsServiceProtocol> newsService;
 
 @end

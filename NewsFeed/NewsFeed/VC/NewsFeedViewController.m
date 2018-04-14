@@ -7,19 +7,14 @@
 //
 
 #import "NewsFeedViewController.h"
-#import "NetworkManager.h"
 #import "StoryTableCell.h"
 #import "SingleNewsViewController.h"
-#import "StoryDB+CoreDataProperties.h"
-#include "AppDelegate.h"
+#import "NewsServiceFactory.h"
 
 @interface NewsFeedViewController () <UITableViewDelegate, UITableViewDataSource, NSURLConnectionDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-//@property (nonatomic) NSMutableArray *listOfStories;
-@property (nonatomic) NSMutableArray<StoryDB *> *listOfStories;
-@property (nonatomic) NetworkManager *networkManager;
-@property (nonatomic, weak) AppDelegate *appDelegate;
+@property (nonatomic) NSMutableArray<Story *> *listOfStories;
 
 @end
 
@@ -33,30 +28,16 @@
     self.tableView.dataSource = self;
     [self.tableView registerNib:[UINib nibWithNibName:@"StoryTableCell" bundle:nil] forCellReuseIdentifier:[StoryTableCell reuseIdentifier]];
     
-    _appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.newsService = [NewsServiceFactory getService];
+    self.listOfStories = [NSMutableArray new];
     
-    self.networkManager = [[NetworkManager alloc] init];
-    [self.networkManager getTopStoriesWithCompletion:^(NSArray *stories, NSError *error) {
+    [self.newsService getTopStoriesWithCompletion:^(NSArray<Story *> *stories, NSError *error) {
         
-        self.listOfStories = [[NSMutableArray alloc] init];
-        
-
-        for (Story *story in stories){
-            
-            StoryDB *storyDB = [NSEntityDescription insertNewObjectForEntityForName:@"StoryDB" inManagedObjectContext:self.appDelegate.persistentContainer.viewContext];
-            
-            storyDB.title = story.title;
-            storyDB.identifier = story.storyID.intValue;
-            storyDB.storedHtml = story.storedHtml;
-            storyDB.author = story.by;
-            
-            [self.listOfStories addObject:storyDB];
-        }
-    
         dispatch_async(dispatch_get_main_queue(), ^{
+            self.listOfStories = [stories copy];
             [self.tableView reloadData];
         });
-
+        
     }];
 }
 
@@ -80,10 +61,10 @@
     
     StoryTableCell *cell = (StoryTableCell *)[tableView dequeueReusableCellWithIdentifier:[StoryTableCell reuseIdentifier]];
     
-    StoryDB *story = self.listOfStories[indexPath.row];
+    Story *story = self.listOfStories[indexPath.row];
     
     cell.title.text = story.title;
-    cell.by.text = story.author;
+    cell.by.text = story.by;
     
     cell.title.lineBreakMode = NSLineBreakByWordWrapping;
     cell.title.numberOfLines = 0;

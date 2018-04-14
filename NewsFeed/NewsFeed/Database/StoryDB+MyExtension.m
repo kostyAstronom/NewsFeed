@@ -1,25 +1,22 @@
 //
-//  StoryDB+CoreDataProperties.m
+//  StoryDB+MyExtension.m
 //  NewsFeed
 //
-//  Created by Romanchuk, Konstantin on 11.04.2018.
+//  Created by Romanchuk, Konstantin on 12.04.2018.
 //  Copyright © 2018 Romanchuk, Konstantin. All rights reserved.
 //
-//
 
-#import "StoryDB+CoreDataProperties.h"
+#import "StoryDB+MyExtension.h"
 
-@implementation StoryDB (CoreDataProperties)
-
-+ (NSFetchRequest<StoryDB *> *)fetchRequest {
-	return [NSFetchRequest fetchRequestWithEntityName:@"StoryDB"];
-}
+@implementation StoryDB (MyExtension)
 
 - (void)setupWithDictionary:(NSDictionary *)dictionary {
     
     self.author = dictionary[@"by"];
     self.identifier = [dictionary[@"id"] intValue];
     self.title = dictionary[@"title"];
+    self.url = dictionary[@"url"];
+    self.time = [dictionary[@"time"] intValue];
     
     NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
     NSString *fileName = [NSString stringWithFormat:@"%@.html", dictionary[@"id"]];
@@ -37,9 +34,5 @@
     
 }
 
-@dynamic storedHtml;
-@dynamic author;
-@dynamic identifier;
-@dynamic title;
 
 @end

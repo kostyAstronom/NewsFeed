@@ -23,14 +23,16 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void)setUpWith:(StoryDB *)story {
+- (void)setUpWith:(Story *)story {
     
     if (story) {
         self.title = story.title;
         
-        //NSTimeInterval timestamp = (NSTimeInterval)[story.time doubleValue];
-        //NSDate *updatetimestamp = [NSDate dateWithTimeIntervalSince1970:timestamp];
-        //self.timeLabel.text = [NSString stringWithFormat:@"%@", updatetimestamp];
+        NSTimeInterval timestamp = (NSTimeInterval)[story.time doubleValue];
+        NSDate *updatetimestamp = [NSDate dateWithTimeIntervalSince1970:timestamp];
+        self.timeLabel.text = [NSString stringWithFormat:@"%@", updatetimestamp];
+        self.timeLabel.text = [NSString stringWithFormat:@"%@", story.time];
+        
         [self.webView loadRequest:[NSURLRequest requestWithURL:story.storedHtml]];
     }
     

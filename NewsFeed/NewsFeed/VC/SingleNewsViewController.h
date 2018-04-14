@@ -16,6 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *timeLabel;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
-@property (nonatomic) StoryDB *story;
+@property (nonatomic) Story *story;
 
 @end

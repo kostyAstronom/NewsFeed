@@ -21,5 +21,6 @@
 @property NSURL *storedHtml;
 
 - (id)initWithDictionary:(NSDictionary*)dictionary;
+- (void)setupWithDictionary:(NSDictionary*)dictionary;
 
 @end

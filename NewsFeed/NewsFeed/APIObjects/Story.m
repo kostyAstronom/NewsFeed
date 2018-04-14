@@ -27,31 +27,22 @@
 - (id)initWithDictionary:(NSDictionary*)dictionary {
     
     if (self = [super init]) {
-        self.by = dictionary[@"by"];
-        self.descendants = dictionary[@"descendants"];
-        self.storyID = dictionary[@"id"];
-        self.kids = dictionary[@"kids"];
-        self.score = dictionary[@"score"];
-        self.time = dictionary[@"time"];
-        self.title = dictionary[@"title"];
-        self.url = dictionary[@"url"];
-        
-        NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
-        NSString *fileName = [NSString stringWithFormat:@"%@.html", dictionary[@"id"]];
-        path = [path stringByAppendingPathComponent:fileName];
-        
-        NSURL *storyURL = [NSURL URLWithString:dictionary[@"url"]];
-        NSData *urlData = [NSData dataWithContentsOfURL:storyURL];
-        
-        BOOL fileExists = [[NSFileManager defaultManager] fileExistsAtPath:path];
-        if (!fileExists) {
-            [urlData writeToFile:path atomically:YES];
-        }
-        
-        self.storedHtml = [NSURL URLWithString:path];
+        [self setupWithDictionary:dictionary];
     }
     return self;
     
+}
+
+- (void)setupWithDictionary:(NSDictionary *)dictionary {
+    self.by = dictionary[@"by"];
+    self.descendants = dictionary[@"descendants"];
+    self.storyID = dictionary[@"id"];
+    self.kids = dictionary[@"kids"];
+    self.score = dictionary[@"score"];
+    self.time = dictionary[@"time"];
+    self.title = dictionary[@"title"];
+    self.url = dictionary[@"url"];
+    self.storedHtml = dictionary[@"storedHtml"];
 }
 
 @end

@@ -15,7 +15,7 @@
 @interface NewsService ()
 
 @property (nonatomic) id<NewsServiceProtocol> networkManager;
-@property (nonatomic) NewsDatabaseManager *databaseManager;
+@property (nonatomic) id<DatabaseProtocol> databaseManager;
 
 @end
 
@@ -40,7 +40,9 @@
     
     [self.networkManager getTopStoriesWithCompletion:^(NSArray<Story *> *stories, NSError *error) {
         completionHandler(stories, error);
-        [self.databaseManager save:stories];
+        for (Story *story in stories) {
+            [self.databaseManager saveStory:story];
+        }
     }];
     
 }

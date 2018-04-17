@@ -11,5 +11,7 @@
 @protocol DatabaseProtocol
 
 - (void)getTopStoriesWithCompletion:(void(^)(NSArray<Story *> *stories, NSError *error))completionHandler;
+- (void)saveStory:(Story *)story;
+- (void)deleteStory:(Story *)story;
 
 @end

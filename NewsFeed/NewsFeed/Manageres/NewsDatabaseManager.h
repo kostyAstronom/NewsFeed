@@ -7,13 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "NewsServiceProtocol.h"
+#import "StoryDB+MyExtension.h"
+#import "DatabaseProtocol.h"
 
-@interface NewsDatabaseManager : NSObject <NewsServiceProtocol>
+@interface NewsDatabaseManager : NSObject <DatabaseProtocol>
 
 @property (nonatomic) NSManagedObjectContext *context;
 
 - (id)initWithManagedObjectContext:(NSManagedObjectContext *)context;
-- (void)save:(NSArray<Story*> *)stories;
 
 @end

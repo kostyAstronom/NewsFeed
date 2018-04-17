@@ -8,13 +8,14 @@
 
 #import "NewsService.h"
 #import "NetworkManager.h"
+#import "MockNetworkManager.h"
 #import "NewsDatabaseManager.h"
 #import "AppDelegate.h"
 
 @interface NewsService ()
 
 @property (nonatomic) id<NewsServiceProtocol> networkManager;
-@property (nonatomic) id<DatabaseServiceProtocol> databaseManager;
+@property (nonatomic) NewsDatabaseManager *databaseManager;
 
 @end
 
@@ -24,6 +25,7 @@
     
     if (self = [super init]) {
         self.networkManager = [NetworkManager new];
+        //self.networkManager = [MockNetworkManager new];
         self.databaseManager = [[NewsDatabaseManager alloc] initWithManagedObjectContext:((AppDelegate *)[[UIApplication sharedApplication] delegate]).persistentContainer.viewContext];
     }
     return self;

@@ -150,21 +150,21 @@
     
 }
 
-- (void)getHTMLByStory:(StoryDB *)story withCompletion:(void(^)(NSURLRequest *htmlStory, NSError *error))completionHandler {
-    
-    NSString *storyURL = story.url;
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
-    [request setHTTPMethod:@"GET"];
-    [request setURL:[NSURL URLWithString:storyURL]];
-    
-    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *jsonData, NSURLResponse *response, NSError *error) {
-        
-        if (completionHandler) {
-            completionHandler(request, error);
-        }
-        
-    }] resume];
-    
-}
+//- (void)getHTMLByStory:(StoryDB *)story withCompletion:(void(^)(NSURLRequest *htmlStory, NSError *error))completionHandler {
+//
+//    NSString *storyURL = story.url;
+//    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+//    [request setHTTPMethod:@"GET"];
+//    [request setURL:[NSURL URLWithString:storyURL]];
+//
+//    [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData *jsonData, NSURLResponse *response, NSError *error) {
+//
+//        if (completionHandler) {
+//            completionHandler(request, error);
+//        }
+//
+//    }] resume];
+//
+//}
 
 @end

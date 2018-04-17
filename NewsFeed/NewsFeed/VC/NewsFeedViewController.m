@@ -57,6 +57,27 @@
     return 140;
 }
 
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return UITableViewCellEditingStyleDelete;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        NSMutableArray *copyListOfStories = [self.listOfStories mutableCopy];
+        [copyListOfStories removeObjectAtIndex:indexPath.row];
+        self.listOfStories = [copyListOfStories mutableCopy];
+        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationLeft];
+        [tableView reloadData];
+    }
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
     StoryTableCell *cell = (StoryTableCell *)[tableView dequeueReusableCellWithIdentifier:[StoryTableCell reuseIdentifier]];
